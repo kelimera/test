@@ -9,5 +9,5 @@ define('APP_DEBUG','True');
 //更改框架目录名称，并载入框架入口文件；
 require'./Think/ThinkPHP.php';
 
-
+//日你妈卖批
 ?>
