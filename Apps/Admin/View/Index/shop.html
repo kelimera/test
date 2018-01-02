@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	/*订单*/
+.o_table{
+  width: 960px;
+  min-height: 100px;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+
+.o_tb{
+	width:960px;
+	border: 1px solid #E5E5E5;
+	border-color: #E5E5E5;
+    border-collapse: collapse;
+}
+
+.o_tr{
+	height:40px;
+	font-size: 14px;
+	color: #646464;
+}
+
+.o_tr1{
+
+	height:80px;
+	font-size: 12px;
+	color: #646464;
+	text-align: center;
+}
+
+.order_sp_1{
+	color: #CF0000;
+	font-weight: bold;
+}
+
+.order_hui{
+	width: 960px;
+	height: 35px;
+	background-color: #F4F4F4;
+	line-height: 35px;
+}
+
+.order_hui span{
+	margin-left: 18px;
+	font-size: 14px;
+}
+
+.order_hui_sp{
+		color: #636365;
+	    font-weight: bold;
+}
+.order_zhuangtai{
+	width: 150px;
+	height: 35px;
+	float: right;
+}
+
+.order_a{
+	font-size: 14px;
+}
+.td_1{
+	width: 280px;
+}
+
+.td_2{
+	width: 300px;
+}
+
+.td_3{
+	width: 80px;
+}
+</style>
+<body>
+	<div>
+		<div class="o_table">
+                     <table border=1px class="o_tb">
+                            <tr class="o_tr">
+                              <th>商品名字</th>
+                              <th>商品图片</th>
+                              <th>商品数量</th>
+                              <th>单价</th>
+                              <th>小计</th>
+                            </tr>
+		                  <volist name="arr" id="arr">
+		                    <tr class="o_tr1">
+			                   <td class="td_1"><{$arr.d_shopname}></td>
+			                   <td class="td_2"><img src="__PUBLIC__/<{$arr.d_shopimg}>" alt="" style="width:80px;height:80px;"></td>
+			                   <td class="td_3"><{$arr.d_shopnum}></td>
+			                   <td class="td_4">￥<{$arr.d_shopprice}>元</td>
+			                   <td>￥<{$arr['d_shopnum']*$arr['d_shopprice']}>元</td>
+		                   </tr>
+		               </volist>
+                  </table>
+        </div>
+	</div>
+</body>
+</html>
